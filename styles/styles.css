@@ -1,0 +1,30 @@
+.grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    max-width: 90%;
+    align-items: center;
+    
+    /* max-width: 800px;
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;  */
+  }
+
+.card {
+    display: flex;
+    border: .5px solid gray;
+    width: 100%;
+    margin-top: 20px;
+    padding: 15px;
+  }
+
+.card_img {
+    width: 200px;
+    height: 150px;
+}
+
+.card_title {
+    font-size: 2ch;
+    font-weight: bold;
+}

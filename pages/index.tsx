@@ -13,21 +13,6 @@ export async function getStaticProps() {
   }
 }
 
-<style jsx>{`
-.grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  border: 5px solid red;
-
-  max-width: 800px;
-  
-  list-style: none;
-  margin-left: 0;
-  padding-left: 0;
-}
-`}</style>
 
 export default function Home({data}) {
   const results = data;
@@ -49,9 +34,11 @@ export default function Home({data}) {
           const { id, title } = result;
           return (
             <li className="card" key={ id }>
-              <img src={ avatar } />
-              <h2>Author: { author }</h2>
-              <h3>Title: { title }</h3>
+              <img className="card_img" src={ avatar } />
+              <div>
+                  <h3 className="card_title">{ title }</h3>
+                  <h2>Author: { author }</h2>
+              </div>
             </li>
           )
         })}
