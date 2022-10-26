@@ -31,13 +31,16 @@ export default function Home({data}) {
         {results.map(result => {
           const author = result.author.name;
           const avatar = result.author.avatar;
-          const { id, title } = result;
+          const { id, title, thumbnail } = result;
           return (
             <li className="card" key={ id }>
-              <img className="card_img" src={ avatar } />
+              <img className="card_img" src={ thumbnail } />
               <div className="card_letters">
                   <h3 className="card_title">{ title }</h3>
-                  <h2 className="card_h2">Author: { author }</h2>
+                  <div className="avatar_author">
+                    <img className="card_avatar_img" src={ avatar } />
+                    <h2 className="card_h2">{ author }</h2>
+                  </div>
               </div>
             </li>
           )
