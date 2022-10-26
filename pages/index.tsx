@@ -35,9 +35,9 @@ export default function Home({data}) {
           return (
             <li className="card" key={ id }>
               <img className="card_img" src={ avatar } />
-              <div>
+              <div className="card_letters">
                   <h3 className="card_title">{ title }</h3>
-                  <h2>Author: { author }</h2>
+                  <h2 className="card_h2">Author: { author }</h2>
               </div>
             </li>
           )
